@@ -1,18 +1,5 @@
 from pathlib import Path
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
 
-sentry_sdk.init(
-        # В этой переменной будет значение для вашего проекта.
-    dsn="https://e92a1de991124e4b9dce0ad16f114b79@o4505283093790720.ingest.sentry.io/4505283103817728",
-    integrations=[
-        DjangoIntegration(),
-    ],
-
-    traces_sample_rate=1.0,
-
-    send_default_pii=True
-)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
